@@ -8,3 +8,4 @@ print("Printing only IP address of the iplist : " + iplist[-2]+",  " + iplist[-3
 print("IP addresses: " + iplist[3] + ", and " + iplist[4])
 print("IP addresses:", iplist[3], ", and", iplist[4])
 print(f"IP addresses: {iplist[3]}, and {iplist[4]}")
+print(dir(iplist))
