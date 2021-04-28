@@ -9,20 +9,30 @@ for function1 in farms:
 
 
 inputFarm = input("Pleae choose (NE Farm, W Farm or SE Farm) a farm to display its plant/animal \n >")
-
+count = 0
 for function2 in farms:
     if function2.get('name') == inputFarm:
         print(function2.get('agriculture'))
+        count = count + 1
         break
-
+if count == 0:
+    print("You have not entered the given choice")
 inputFarm = input("Pleae choose (NE Farm, W Farm or SE Farm) a farm to display its plant/animal \n >")
 
+count = 0
 for function3 in farms:
     if function3.get('name') == inputFarm:
         if inputFarm == "SE Farm":
             onlyAnimal = function3.get('agriculture')
-            print(onlyAnimal[0])
+            for displayAnimal in onlyAnimal:
+                if displayAnimal != "carrots" and displayAnimal != "celery":
+                    print(displayAnimal)
+                    count = count + 1
             break
         else:
             print(function3.get('agriculture'))
+            count = count + 1
             break
+
+if count == 0:
+    print("You have not entered the given choice")
