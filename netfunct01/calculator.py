@@ -4,11 +4,11 @@
 def callAdd(firstVal, secondVal): 
     return firstVal + secondVal
 
-# function to substract
+# function to subtract
 def callSub(firstVal, secondVal):
     return firstVal - secondVal
 
-# function to myltiply
+# function to multiply
 def callMul(firstVal, secondVal):
     return firstVal * secondVal
 
@@ -29,7 +29,7 @@ def main():
     # To get second value
     secondVal = input("Enter the second digit \n")
     while not secondVal.isdigit():
-        secondVal = input("You have not entered a valid number, please enter the seond digit again \n")
+        secondVal = input("You have not entered a valid number, please enter the second digit again \n")
     secondVal = int(secondVal)
     
     # To get arithmetic operation
@@ -42,10 +42,11 @@ def main():
     elif arit_Opt == "*":
         print(f"The answer is = {callMul(firstVal,secondVal)}")
     elif arit_Opt == "/":
-        while secondVal == 0:
-            secondVal = input("You can not divide by a Zero, enter second value again \n")
+        while secondVal == 0 or secondVal>firstVal:
+            secondVal = input("You can not divide by a Zero or greater value, enter second value again \n")
             while not secondVal.isdigit():
-                secondVal = input("You have not entered a valid number, please enter the seond digit again \n")
+                secondVal = input("You have not entered a valid number, please enter the second digit again \n")
+            secondVal = int(secondVal)
         print(f"The answer is = {callDiv(firstVal,secondVal)}")        
 # call our main function
 
