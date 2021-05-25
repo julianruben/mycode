@@ -24,12 +24,12 @@ def main():
 
     print("Rovers List: \n")
     #for displayrovers in roverslist:
-    print(*roverslist,"\n")
+    print(*roverslist,sep="\n")
     roversname = input("Choose the rovers from the list")
    
     print("Camera List: \n")
     #for camlist in cameralist:
-    print(*cameralist[roversname],"\n")         
+    print(*cameralist[roversname],sep="\n")         
     cameraname = input("Choose the camera name from the list")
 
     edate = input("Enter the earth date : ")
