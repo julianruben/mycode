@@ -18,6 +18,7 @@ def main():
     # print the total number of lines (span returns (lines, columns))
     print(f"Total lines processed {superdf.shape[0]}")
     
+    # Used dataframe drop method to remove heroname column and write into a new csv file
     df = superdf.drop(columns=['heroname'])
     df.to_csv("regularbirthday.csv", index=False)
 
