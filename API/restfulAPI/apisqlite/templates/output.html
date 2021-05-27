@@ -1,0 +1,8 @@
+<!doctype html>
+<html>
+   <body>
+	{% for movies in resp["Search"] %}
+		<h4><span>{{ movies.Title }}</span></h4>
+   	{% endfor %}
+   </body>
+</html>
